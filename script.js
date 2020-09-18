@@ -39,7 +39,7 @@ precision mediump float;
 
 out vec4 o_Color;
 
-uniform Block {
+layout(std140) uniform Block {
   vec4 u_Color;
 };
 
