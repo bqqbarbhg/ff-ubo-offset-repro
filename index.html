@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Minimal UBO offset repro</title>
+  <style>
+    body { font-family: sans-serif; }
+    .error {
+      background-color: #e00;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="demo-canvas" width="640" height="480"></canvas>
+  <div>
+    <label for="demo-ubo-offset">UBO offset:</label>
+    <input id="demo-ubo-offset" value="0x10000">
+    <span id="demo-ubo-align"></span>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
