@@ -8,6 +8,9 @@
       background-color: #e00;
       color: #fff;
     }
+    .desc {
+      max-width: 640px;
+    }
   </style>
 </head>
 <body>
@@ -16,6 +19,9 @@
     <label for="demo-ubo-offset">UBO offset:</label>
     <input id="demo-ubo-offset" value="0x10000">
     <span id="demo-ubo-align"></span>
+  </div>
+  <div class="desc">
+    <p>The demo renders two triangles over a red background. The first green triangle has UBO bound always at offset 0. The UBO offset of the blue triangle is configurable via the input above. According to my testing using Firefox on Windows+Nvidia the triangle is rendered white without error if the offset is greater than or equal to 64kB (0x10000). The backing uniform buffer is 1MiB (0x100000) in size and using an offset above that fails as it should.</p>
   </div>
   <script src="script.js"></script>
 </body>

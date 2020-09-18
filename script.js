@@ -75,7 +75,7 @@ function drawTriangle(vertexOffset, uniformOffset, uniformData) {
 
 function updateAlignText() {
   const uboOffset = parseInt(uboOffsetInput.value);
-  let alignText = `align to ${uboAlign} (0x${uboAlign.toString(16)}) bytes`
+  let alignText = `, must be aligned to ${uboAlign} (0x${uboAlign.toString(16)}) bytes`
   if (uboOffset % uboAlign != 0) {
     alignText += " !! UNALIGNED !!";
     uboAlignSpan.classList.add("error");
